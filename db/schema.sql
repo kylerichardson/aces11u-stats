@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS player (
 );
 
 CREATE TABLE IF NOT EXISTS game (
-    game_id INT UNSIGNED NOT NULL PRIMARY KEY,
+    game_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     home_team_id INT UNSIGNED NOT NULL,
     away_team_id INT UNSIGNED NOT NULL,
     rink_location VARCHAR(100),
@@ -39,12 +39,23 @@ CREATE TABLE IF NOT EXISTS goal (
     goal_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     game_id INT UNSIGNED NOT NULL,
     player_id INT UNSIGNED NOT NULL,
-    team_id INT UNSIGNED NOT NULL,
     game_period CHAR(1),
     clock_time CHAR(5),
     goal_type VARCHAR(10),
     goal_strength VARCHAR(10),
     FOREIGN KEY (game_id) REFERENCES game(game_id),
-    FOREIGN KEY (player_id) REFERENCES player(player_id),
-    FOREIGN KEY (team_id) REFERENCES team(team_id)
+    FOREIGN KEY (player_id) REFERENCES player(player_id)
+);
+
+CREATE TABLE IF NOT EXISTS penalty (
+    penalty_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    game_id INT UNSIGNED NOT NULL,
+    player_id INT UNSIGNED NOT NULL,
+    game_period CHAR(1),
+    clock_time CHAR(5),
+    penalty_type VARCHAR(10),
+    infraction VARCHAR(25),
+    length_in_sec INT UNSIGNED,
+    FOREIGN KEY (game_id) REFERENCES game(game_id),
+    FOREIGN KEY (player_id) REFERENCES player(player_id)
 );
