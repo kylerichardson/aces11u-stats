@@ -58,6 +58,42 @@
         </tbody>
       </table>
       <br />
+      <h2>LEAGUE STANDINGS</h2>
+      <table class="table table-striped" id="league_standings">
+        <thead>
+          <tr>
+            <th scope="col">WNYAHL 11U GREEN</th>
+            <th scope="col">GP</th>
+            <th scope="col">PTS</th>
+            <th scope="col">W</th>
+            <th scope="col">L</th>
+            <th scope="col">T</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row">Buffalo Bisons 11U Nadbrzuch</td>
+            <td>12</td><td>19</td><td>9</td><td>2</td><td>1</td>
+          </tr>
+          <tr>
+            <td scope="row">Rochester Edge 12U Occhino</td>
+            <td>11</td><td>16</td><td>7</td><td>2</td><td>2</td>
+          </tr>
+          <tr>
+            <td scope="row">Rochester Jr Americans 11U Parker</td>
+            <td>12</td><td>15</td><td>6</td><td>3</td><td>3</td>
+          </tr>
+          <tr>
+            <td scope="row">Tri-County/Rochester Aces 11U Reddy</td>
+            <td>13</td><td>6</td><td>2</td><td>9</td><td>2</td>
+          </tr>
+          <tr>
+            <td scope="row">Lockport Lock Monsters 11U Richards</td>
+            <td>12</td><td>4</td><td>2</td><td>10</td><td>0</td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
       <h2>SCHEDULE</h2>
       <table class="table table-striped">
         <thead>
@@ -312,6 +348,79 @@
               L 2-7
             </a></td>
           </tr>
+          <tr>
+            <td>Fri 1/12 - Mon 1/15<br />
+              <small><em>Erie MLK Cup Tournament</em></small></td>
+            <td>T</td>
+            <td>TBA</td>
+            <td>Erie, PA</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Sat 1/20 8:30 AM</td>
+            <td>L</td>
+            <td>@ Buffalo Bisons 11U Nadbrzuch</td>
+            <td>Buffalo State</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Sun 1/21 1:30 PM</td>
+            <td>Ex</td>
+            <td>vs Niagara Jr Purple Eagles 11U Sayers</td>
+            <td>Lakeshore Ice Arena, East Rink</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Sat 1/27 5:00 PM</td>
+            <td>L</td>
+            <td>@ Rochester Edge 12U Occhino</td>
+            <td>Paul Louis Arena</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Sun 1/28 2:25 PM</td>
+            <td>L</td>
+            <td>@ Buffalo Bisons 11U Nadbrzuch</td>
+            <td>North Buffalo Ice Rink</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Fri 2/2 - Sun 2/4<br />
+              <small><em>Rochester Cup Tournament</em></small></td>
+            <td>T</td>
+            <td>TBA</td>
+            <td>Iceplex</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Sat 2/10 10:30 AM</td>
+            <td>Ex</td>
+            <td>@ Cortland 12U Mixed</td>
+            <td>Cortland, NY</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Fri 2/16 - Mon 2/19<br />
+              <small><em>Pittsburgh President's Day Blowout</em></small></td>
+            <td>T</td>
+            <td>TBA</td>
+            <td>Pittsburgh, PA</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Sat 3/2 12:00 PM</td>
+            <td>Ex</td>
+            <td>vs Cortland 12U Mixed</td>
+            <td>Lakeshore Ice Arena, East Rink</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Sun 3/3 12:00 PM</td>
+            <td>Ex</td>
+            <td>vs East Aurora Beast 12U Mixed Janish</td>
+            <td>Lakeshore Ice Arena, East Rink</td>
+            <td>-</td>
+          </tr>
         </tbody>
       </table>
       <br />
@@ -399,7 +508,7 @@
           </tr>
         </tbody>
       </table>
-      <br />
+      <p class="text-body-secondary">Stats and standings updated as of <em>12/31/2023</em></p>
       <div class="container">
         <footer>
           <p class="text-center text-body-secondary" xmlns:cc="http://creativecommons.org/ns#">This page by <span property="cc:attributionName">Kyle Richardson</span> is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="license noopener noreferrer"><img alt="CC BY-NC-SA 4.0" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png"></a></p>
@@ -416,6 +525,12 @@
           paging: false,
           searching: false,
           order: [[4, "desc"]]
+        });
+        $("#league_standings").DataTable({
+          info: false,
+          paging: false,
+          searching: false,
+          order: [[2, "desc"]]
         });
       });
     </script>
