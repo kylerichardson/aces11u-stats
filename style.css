@@ -7,7 +7,7 @@
          url('fonts/Broaven.ttf') format('truetype');
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: Broaven;
     color: #0c7f40;
 }
